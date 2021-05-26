@@ -3,51 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isabelle Hontebeyrie">
+    <meta name="description" content="Projet final du cours d'intégration2 - Grille festive">
+    <meta name="keywords" content="Anticoste, Richard Baillargeon,
+    Techniques d’intégration multimédia, Cégep de Sainte-Foy, récits
+    numérique">
+    <meta name="keyword" content="Techniques d’intégration multimédia, Grille festive, TIM actu">
     <title>Tim actu - Cinéma</title>
-<!--    <link rel="stylesheet" href="css/styles.css">-->
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/_normalize.css">
+    <link rel="stylesheet" href="css/_styles.css">
 </head>
 <body>
+<div role="banner" class="bandeau">
+    <a class="tim" href="index.html">TIM ACTU</a>
+    <p class="slogan">Design digital des actualités culturelles</p>
+</div>
 <main id="main" role="main">
-    <section class="bleed cards">
+    <section class="entete cardsEntete cards">
         <div class="cards_div card1">
-
+            <picture class="categorie">
+                <source media="(min-width: 601px)" srcset="images/425_degrade.jpg">
+                <source media="(max-width: 600px)" srcset="images/575_degrade.jpg">
+                <img src="images/575_degrade.jpg" alt="degradé">
+            </picture>
+            <img class="nomCategorie" src="images/ima_cinema.png" alt="Cinéma">
         </div>
-        <div class="cards_div card2">
-            <img src="http://placehold.it/798x510" alt="">
+        <div class="imageCategorie cards_div card2">
+            <picture>
+                <source media="(min-width: 601px)" srcset="images/789p_entete.jpg">
+                <source media="(max-width: 600px)" srcset="images/325p_entete.jpg">
+                <img class="image" src="images/325p_entete.jpg" alt="Rassemblement de plusieurs personnages du film">
+            </picture>
         </div>
-        <div class="cards_div card3">
-            <img src="http://placehold.it/710x403" alt="">
+        <div class="imageTitre cards_div card3">
+            <picture>
+                <source media="(min-width: 601px)" srcset="images/710p_spork.jpg">
+                <source media="(max-width: 600px)" srcset="images/600p_spork.jpg">
+                <img class="image" src="images/600p_spork.jpg" alt="Woody et Fourchette">
+            </picture>
         </div>
-        <div class="cards_div card4">
+        <div class="cards_div card4 titre">
             <h1>Ciné nostalgie: les 25 ans (!) d’«Histoire de jouets»</h1>
-            <p>Isabelle Hontebeyrie</p>
-            <p>Samedi, 21 novembre 2020 04:00</p>
+            <div class="info">
+                <p class="infoAuteur">Isabelle Hontebeyrie</p>
+                <p class="infoDate">Samedi, 21 novembre 2020 04:00</p>
+            </div>
         </div>
         <div class="cards_div card5">
             <div class="boiteAccroche">
-                <p class="accroche">Le 22 novembre 1995, le film d'animation «Histoire de jouets» prend l’affiche en Amérique du Nord. Réalisé par John Lasseter, un inconnu, il a été produit par Pixar, compagnie alors propriété de Steve Jobs. Son originalité? Il est le premier long métrage dont l’animation a été entièrement conçue par ordinateur! </p>
+                <div class="conteneur">
+                    <p class="cols_7_de_12 accroche">Le 22 novembre 1995, le film d'animation «Histoire de jouets» prend l’affiche en Amérique du Nord. Réalisé par John Lasseter, un inconnu, il a été produit par Pixar, compagnie alors propriété de Steve Jobs. Son originalité? Il est le premier long métrage dont l’animation a été entièrement conçue par ordinateur! </p>
+                </div>
             </div>
         </div>
     </section>
-    <section class="conteneur cards">
-        <div class="cards_div card6">
+    <section class="conteneur cardsArticle">
+        <div class="texte cards_div card6">
             <h2>Les premières idées</h2>
             <p>Dès les balbutiements du projet, «Toy Story» fait l’objet de tractations entre Pixar et Disney, Jeffrey Katzenberg ayant été séduit par «Tin Toy», court métrage d’animation de John Lasseter, récipiendaire de l’Oscar du meilleur film d’animation en 1988. Le contrat, daté de 1991, fait de Disney le studio propriétaire du long métrage et des personnages, Pixar empochant 12,5 % des recettes du box-office.</p>
             <p>Le point de départ est donc «Tin Toy» et l’histoire du long métrage est écrite par John Lasseter, Andrew Stanton et Pete Docter, des noms aujourd’hui connus du grand public. Le scénario original présente Tinny et Woody (à l’époque une marionnette de ventriloque), ce dernier étant le méchant qui tyrannise les autres jouets au point de les faire se révolter.</p>
         </div>
         <div class="cards_div card7">
-            <img src="http://placehold.it/405x405" alt="">
+            <picture>
+                <source media="(min-width: 601px)" srcset="images/405p_jouets.jpg">
+                <source media="(max-width: 600px)" srcset="images/560p_jouets.jpg">
+                <img class="image" src="images/405p_jouets.jpg" alt="Tous les jouets du film: Histoire de jouets 4">
+            </picture>
         </div>
-        <div class="cards_div card8">
+        <div class="texte cards_div card8">
             <h2>Une ré-imagination qui a tout changé</h2>
             <p>Devant les scénarios en images que les studios trouvent atroces, Disney donne à Pixar une entière liberté créatrice afin de redresser la barre. Les auteurs se remettent au travail et livrent un deuxième scénario en 1991. Les jouets du début sont jugés dépassés. C’est à ce moment que Tinny est délaissé par John Lasseter qui décide de le convertir en personnage à la G.I. Joe et d’en faire un astronaute, le nom de Buzz lui étant donné en hommage à Buzz Aldrin et son costume étant un mélange des combinaisons des astronautes des missions Apollo et des poupées G.I. Joe.</p>
             <p>Woody devient gentil, car comme l’a indiqué depuis Andrew Stanton dans les pages du magazine «Time», il fallait que le public pense que «Buzz et Woody coincés dans un ascenseur pendant 70 minutes soit un divertissement de la plus haute qualité.» De fait, les deux personnages deviennent amis et «Toy Story» se transforme en «buddy comedy», autrement dit, une comédie de «chums».</p>
             <p>Appelé en renfort pour améliorer le scénario, un jeune homme du nom de Joss Whedon (que Lasseter connaît grâce à la lecture du film «Buffy» qui n’a jamais vu le jour) propose d’inclure une poupée Barbie dont la personnalité serait inspirée de Sarah Connor dans le deuxième «Terminator». Mattel, on s’en doute, refuse... mais reviendra sur sa décision lors des suites. Et c’est également Joss Whedon qui crée Rex, le dinosaure un peu cinglé!</p>
         </div>
         <div class="cards_div card9">
-            <img src="http://placehold.it/405x405" alt="">
+            <picture>
+                <source media="(min-width: 601px)" srcset="images/405p_foire.jpg">
+                <source media="(max-width: 600px)" srcset="images/560p_foire.jpg">
+                <img class="image" src="images/560p_foire.jpg" alt="Buzz l'Éclair dans une foire">
+            </picture>
         </div>
-        <div class="cards_div card10">
+        <div class="texte cards_div card10">
             <h2>Des voix iconiques</h2>
             <p>Du côté des voix, John Lasseter pense immédiatement à Billy Crystal pour Buzz... mais le comédien décline, «seul regret de toute ma carrière», avouera-t-il plus tard. Le rôle échoit donc à Tim Allen après que le faible budget alloué (30 millions $ US) empêche la production de le proposer à... Jim Carrey. Quant à Tom Hanks, il enregistre la voix de Woody entre «Une ligue en jupons» et «La magie du destin», préférant rester dans un registre comique plutôt que d’intercaler «Histoire de jouets» entre les drames.</p>
             <p>«Philadelphia» et «Forrest Gump». L’acteur passe d’ailleurs son temps à improviser sur le plateau, à un point tel qu’une partie des répliques qu’il a enregistrées pour le premier volet se retrouve dans les deuxième et troisième volets. De plus, John Lassater remarque rapidement que Tom Hanks trouve des dialogues dès qu’on lui donne des accessoires. Un jour, le réalisateur apporte un faux bras coupé, gadget d’Halloween de ses enfants, et Hanks invente alors la scène dans laquelle Woody joue avec le bras de Buzz.</p>
@@ -56,14 +99,28 @@
         <div class="cards_div card11">
             <div class="boiteCitation">
                 <div class="citation">
-                    <h3>Vers l’infini et au-delà !</h3>
+                    <p class="h3">Vers l’infini et au-delà !</p>
                     <p>Buzz, Histoire de Jouets</p>
                 </div>
             </div>
         </div>
     </section>
 </main>
-
-
+<footer role="contentinfo">
+    <div class="headFooter">
+        <a class="tim" href="index.html">TIM Actu</a>
+        <p class="slogan">Design digital des actualités culturelles</p>
+    </div>
+    <div class="sources">
+        <p>Source de l'article</p>
+        <a href="https://www.journaldemontreal.com/">https://www.journaldemontreal.com/</a>
+        <p>Sources des images</p>
+        <ul>
+            <li><a href="https://ew.com/">https://ew.com/</a></li>
+            <li><a href="https://disney.co.uk/">https://disney.co.uk/</a></li>
+        </ul>
+    </div>
+    <div><p>Alex Ferland @ pour le cours d'Intégration II, en Technique d'intégration multimédia, Cégep de Sainte-Foy</p></div>
+</footer>
 </body>
 </html>

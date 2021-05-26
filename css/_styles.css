@@ -1,0 +1,436 @@
+@charset "UTF-8";
+
+/**@author Alex Ferland <2063726@csfoy.ca>
+
+TABLE DES MATIERES
+------------------
+RESET/Normalize (css/_normalize.css)
+Utilitaire
+Charte Typographique
+Grille fluide
+Grille de mise en page
+ */
+:root{
+    --couleurViolet: #4C4259;
+    --couleurBleu: #B6CFE1;
+    --couleurRose: #E7717D
+}
+
+/*Utilitaire*/
+/*----------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+/*Charte Typographique*/
+/*----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    font-size: 62.5%;
+    min-width: 100%;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.375;
+    color: var(--couleurViolet);
+}
+
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        line-height: 1.75;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 6.4rem;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+.h3 {
+    font-size: 3.6rem;
+}
+
+/*Grille fluide*/
+/*---------------------------------------*/
+/*** Classe conteneur pour le centrage et l'affichage de la grille en arriÃ¨re-plan ***/
+@media (min-width: 600px) {
+    .conteneur {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 0;
+        /* Grille 12 colonnes en arriÃ¨re-plan - Mettre en commentaires aprÃ¨s usage */
+        /*background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;*/
+    }
+}
+
+/*** Classes pour dimensionner les blocs ***/
+@media (min-width: 600px) {
+
+    /*** Classe de base pour l'intégration en flexbox ***/
+    .rangee{
+        display:flex;
+        justify-content: space-between;
+        align-items:stretch; /* valeur par dÃ©faut */
+    }
+
+    .cols_1_de_12 {
+        width: 6.5%;
+    }
+    .cols_2_de_12 {
+        width: 15%;
+    }
+    .cols_3_de_12 {
+        width: 23.5%;
+    }
+    .cols_4_de_12 {
+        width: 32%;
+    }
+    .cols_5_de_12 {
+        width: 40.5%;
+    }
+    .cols_6_de_12 {
+        width: 49%;
+    }
+    .cols_7_de_12 {
+        width: 57.5%;
+    }
+    .cols_8_de_12 {
+        width: 66%;
+    }
+    .cols_9_de_12 {
+        width: 74.5%;
+    }
+    .cols_10_de_12 {
+        width: 83%;
+    }
+    .cols_11_de_12 {
+        width: 91.5%;
+    }
+    .cols_12_de_12 {
+        width: 100%;
+    }
+}
+
+
+/*Grille de mise en page*/
+/*---------------------------------------*/
+
+.cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 600px) {
+    .entete {
+        width: 100%;
+    }
+    .cardsEntete {
+        display: grid;
+        grid-template-columns: 44.583% 1fr 50.694%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "a b b"
+        "c c d"
+        "e e e";
+    }
+
+    .cardsArticle {
+        display: grid;
+        grid-template-columns: 40.5% 9.5% 9.5% 40.5%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "f f . g"
+        "h h h h"
+        "i . j j"
+        "k . j j";
+    }
+    .card1 {
+        grid-area: a;
+    }
+    .card2 {
+        grid-area: b;
+    }
+    .card3 {
+        grid-area: c;
+    }
+    .card4 {
+        grid-area: d;
+    }
+    .card5 {
+        grid-area: e;
+    }
+    .card6 {
+        grid-area: f;
+    }
+    .card7 {
+        grid-area: g;
+    }
+    .card8 {
+        grid-area: h;
+    }
+    .card9 {
+        grid-area: i;
+    }
+    .card10 {
+        grid-area: j;
+    }
+    .card11 {
+        grid-area: k;
+    }
+    img {
+        max-width: 100%;
+    }
+
+}
+/*Bandeau Entete*/
+.bandeau {
+    height: 10.5rem;
+    background-color: var(--couleurViolet);
+    color: white;
+}
+.tim{
+    font-size: 3.6rem;
+    font-weight: bold;
+    margin: 0 0 0 1rem;
+}
+.tim:link,
+.tim:visited {
+    color: white;
+    text-decoration: none;
+}
+.tim:hover,
+.tim:active {
+    color: var(--couleurRose);
+}
+.tim:focus {
+    border: solid 1px var(--couleurRose);
+    color: var(--couleurBleu);
+}
+.slogan{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 0 0 1rem;
+}
+
+/*Titre et images*/
+.categorie{
+    margin-bottom:  17rem;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .categorie {
+        margin-bottom: 0;
+    }
+}
+
+.nomCategorie {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 320px;
+    left: -215px;
+}
+
+@media (min-width: 600px) {
+    .nomCategorie {
+        transform: rotate(0deg);
+        position: relative;
+        top: -115px;
+        left: 16px;
+    }
+}
+
+.image {
+    border: solid var(--couleurBleu) 3px;
+}
+
+.imageCategorie{
+    position: absolute;
+    left: 274px;
+    top: 368px;
+}
+
+@media (min-width: 600px) {
+    .imageCategorie {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .imageTitre {
+        padding-top: 30px;
+    }
+}
+
+.titre h1 {
+    text-align: center;
+
+}
+
+@media (min-width: 600px) {
+    .titre {
+        text-align: left;
+        margin: 0 0 0 2rem;
+    }
+}
+
+
+/*Auteur et Date*/
+.info {
+    margin-left: 1rem;
+}
+
+@media (min-width: 600px) {
+    .info {
+        bottom: 10px;
+    }
+}
+
+ .info p {
+     margin: 0;
+ }
+
+ .infoAuteur {
+     text-transform: uppercase;
+ }
+
+ .infoDate {
+     color: #9A9A9A;
+ }
+
+
+ /*Accroche*/
+.boiteAccroche,
+.boiteCitation {
+    background-color: var(--couleurBleu);
+}
+.boiteAccroche {
+    margin-top: 6.5rem;
+    margin-bottom: 10.5rem;
+}
+
+.accroche {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 15px;
+}
+
+.accroche {
+    border-left: solid var(--couleurViolet) 5px;
+}
+
+.boiteCitation {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/*Articles*/
+h2 {
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+.texte{
+    margin-bottom: 15rem;
+}
+
+.texte h2,
+.texte p {
+    margin-left: 1rem;
+    }
+@media (min-width: 600px) {
+    .texte h2,
+    .texte p {
+        margin-left: 0;
+    }
+}
+
+
+/*citation*/
+.citation {
+    margin-right: 6rem;
+    padding-right: 2rem;
+    border-right: solid var(--couleurViolet) 5px;
+    text-align: right;
+}
+.citation p {
+    margin: 0;
+}
+
+
+/*Footer*/
+footer {
+    background-color: var(--couleurViolet);
+    color: white;
+    padding-left: 1rem;
+    text-align: center;
+}
+@media (min-width: 600px) {
+    footer {
+        text-align: left;
+        padding-left: 15.2%;
+    }
+    footer .tim,
+    footer .slogan {
+        margin-left: 0;
+    }
+}
+.headFooter{
+    width: 81.9%;
+    border-bottom: solid white 3px;
+}
+.sources ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+.sources p {
+    font-size: 2.4rem;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+.sources a:link,
+.sources a:visited {
+    color: white;
+    text-decoration: underline;
+}
+.sources a:hover,
+.sources a:active {
+    color: var(--couleurRose);
+}
+.sources a:focus {
+    color: var(--couleurBleu);
+    border: solid var(--couleurBleu) 2px;
+}
