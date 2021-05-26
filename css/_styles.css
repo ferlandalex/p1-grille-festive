@@ -1,15 +1,23 @@
 @charset "UTF-8";
 
-/**@author Alex Ferland <2063726@csfoy.ca>
+/*@author Alex Ferland <2063726@csfoy.ca>
 
 TABLE DES MATIERES
 ------------------
 RESET/Normalize (css/_normalize.css)
+Police Importer
 Utilitaire
 Charte Typographique
 Grille fluide
 Grille de mise en page
  */
+
+
+/*Police Importer*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
 :root{
     --couleurViolet: #4C4259;
     --couleurBleu: #B6CFE1;
@@ -28,8 +36,6 @@ html {
 
 /*Charte Typographique*/
 /*----------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 html {
     font-size: 62.5%;
     min-width: 100%;
