@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 
 /*@author Alex Ferland <2063726@csfoy.ca>
@@ -27,9 +34,11 @@ Grille de mise en page
 /*Utilitaire*/
 /*----------------------------------------*/
 html {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 *, *::before, *::after {
+    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
@@ -99,8 +108,14 @@ h2 {
 
     /*** Classe de base pour l'intégration en flexbox ***/
     .rangee{
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align:stretch;
+        -ms-flex-align:stretch;
         align-items:stretch; /* valeur par dÃ©faut */
     }
 
@@ -157,8 +172,11 @@ h2 {
         width: 100%;
     }
     .cardsEntete {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 44.583% 1fr 50.694%;
         grid-template-columns: 44.583% 1fr 50.694%;
+        -ms-grid-rows: auto auto auto;
         grid-template-rows: auto auto auto;
         grid-template-areas:
         "a b b"
@@ -167,8 +185,11 @@ h2 {
     }
 
     .cardsArticle {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 40.5% 9.5% 9.5% 40.5%;
         grid-template-columns: 40.5% 9.5% 9.5% 40.5%;
+        -ms-grid-rows: auto auto auto auto;
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
         "f f . g"
@@ -213,6 +234,69 @@ h2 {
         max-width: 100%;
     }
 
+}
+
+@media (min-width: 600px){
+
+    .card6 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+    }
+
+    .card7 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 4;
+    }
+
+    .card8 {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 4;
+    }
+
+    .card9 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .card10 {
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 2;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 2;
+    }
+
+    .card11 {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+    }
+}
+
+@media (min-width: 600px){
+    .card1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    .card2 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 2;
+    }
+    .card3 {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+    }
+    .card4 {
+        -ms-grid-row: 2;
+        -ms-grid-column: 3;
+    }
+    .card5 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+    }
 }
 /*Bandeau Entete*/
 .bandeau {
@@ -259,14 +343,19 @@ h2 {
 }
 
 .nomCategorie {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     position: absolute;
     top: 320px;
     left: -215px;
+    max-width: 100%;
 }
 
 @media (min-width: 600px) {
     .nomCategorie {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
         transform: rotate(0deg);
         position: relative;
         top: -115px;
@@ -276,6 +365,9 @@ h2 {
 
 .image {
     border: solid var(--couleurBleu) 3px;
+}
+.resize{
+    max-width: 100%;
 }
 
 .imageCategorie{
@@ -308,6 +400,9 @@ h2 {
         text-align: left;
         margin: 0 0 0 2rem;
     }
+    .titre h1 {
+        text-align: left;
+    }
 }
 
 
@@ -322,20 +417,20 @@ h2 {
     }
 }
 
- .info p {
-     margin: 0;
- }
+.info p {
+    margin: 0;
+}
 
- .infoAuteur {
-     text-transform: uppercase;
- }
+.infoAuteur {
+    text-transform: uppercase;
+}
 
- .infoDate {
-     color: #9A9A9A;
- }
+.infoDate {
+    color: #9A9A9A;
+}
 
 
- /*Accroche*/
+/*Accroche*/
 .boiteAccroche,
 .boiteCitation {
     background-color: var(--couleurBleu);
@@ -374,7 +469,7 @@ h2 {
 .texte h2,
 .texte p {
     margin-left: 1rem;
-    }
+}
 @media (min-width: 600px) {
     .texte h2,
     .texte p {
